@@ -16,3 +16,6 @@ redirect:
     path: /redirect
     controller: App\Controller\HomeController::redirect302
 
+template:
+    path: /template
+    controller: App\Controller\HomeController::template

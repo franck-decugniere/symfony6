@@ -7,7 +7,10 @@
 
 - Usefull VSCode extension
   - PHP Intelephense
-  - 
+  - Twig
+
+- Composer repo : https://packagist.org
+
 
 <!-- Create Symfony project from scratch --> 
 symfony new projectDir --version="6.3.*" --webapp mar
@@ -24,3 +27,13 @@ symfony server:start
 
 <!-- Add Symfony Profiler feature -->
 composer require --dev symfony/profiler-pack
+
+# Twig
+Template engine used by Symfony.
+Not mandatory, can use other engine (Smarty, ...)
+
+## Syntax
+{{....}} : display variable
+{%....%} : code declaration
+{#...#} : comment
+{...|...} : filter

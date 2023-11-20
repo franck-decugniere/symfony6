@@ -19,4 +19,7 @@ class HomeController extends AbstractController{
         return $this->redirect('https://www.google.fr');
     }
 
+    public function template() {
+        return $this->render('base.html.twig', []);
+    }
 }
