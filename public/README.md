@@ -18,3 +18,5 @@ php bin/console about
 <!-- Local dev server -->
 symfony server:start
 
+<!-- Add Symfony Profiler feature -->
+composer require --dev symfony/profiler-pack
