@@ -7,3 +7,12 @@ controllers:
 accueil:
     path: /accueil
     controller: App\Controller\HomeController::bonjour
+
+routeRedirect:
+    path: /routeRedirect
+    controller: App\Controller\HomeController::routeRedirect
+
+redirect:
+    path: /redirect
+    controller: App\Controller\HomeController::redirect302
+
