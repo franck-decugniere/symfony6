@@ -23,6 +23,8 @@ composer install
 php bin/console about
 php bin/console debug:route 
 php bin/console list make
+php bin/console make:entity
+php bin/console make:form
 
 <!-- Local dev server -->
 symfony server:start
