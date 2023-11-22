@@ -28,6 +28,9 @@ symfony server:start
 <!-- Add Symfony Profiler feature -->
 composer require --dev symfony/profiler-pack
 
+<!-- Route via annotation -->
+composer require doctrine/annotations
+
 # Twig
 Template engine used by Symfony.
 Not mandatory, can use other engine (Smarty, ...)
