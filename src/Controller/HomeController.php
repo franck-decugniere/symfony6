@@ -46,8 +46,8 @@ class HomeController extends AbstractController
         return $this->render('customer.html.twig', ['customers' => $customers]);
     }
 
-    #[Route('/category/{id', name:'category')]
-    public function getCategory(int $id) 
+    #[Route('/category/{id<\d+>}', name:'category')]
+    public function getCategory($id) 
     {
         $category_id = $id;
         return $this->render('category.html.twig', ['id_category' => $id]);
