@@ -38,4 +38,11 @@ class HomeController extends AbstractController
         $products = ['ordinateur', 'telephone', 'radio', 'k7'];
         return $this->render('product.html.twig', ['products' => $products]);
     }
+
+    #[Route('/customers', name:'customers_lists')]
+    public function showCustomers() 
+    {
+        $customers = ['Laurent', 'Yves', 'Alain', 'Gérard'];
+        return $this->render('customer.html.twig', ['customers' => $customers]);
+    }
 }
