@@ -21,15 +21,25 @@ composer install
 
 <!-- Display information about project -->
 php bin/console about
+php bin/console debug:route 
+php bin/console list make
 
 <!-- Local dev server -->
 symfony server:start
 
 <!-- Add Symfony Profiler feature -->
 composer require --dev symfony/profiler-pack
+composer require --dev symfony/maker-bundle
 
 <!-- Route via annotation -->
 composer require doctrine/annotations
+
+<!-- Form -->
+composer require symfony/form
+
+<!-- Doctrine -->
+composer require doctrine/orm -W
+composer require orm
 
 # Twig
 Template engine used by Symfony.
