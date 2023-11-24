@@ -7,6 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Customer;
+use App\Service\MyHelper;
 use Doctrine\Persistence\ManagerRegistry;
 use Psr\Log\LoggerInterface;
 
@@ -22,8 +23,10 @@ class CustomerController extends AbstractController {
 
 
     #[Route('/form/customer', name: 'form_customer')]
-    public function index(Request $request, ManagerRegistry $doctrine)
+    public function index(Request $request, ManagerRegistry $doctrine, MyHelper $myHelper)
     {
+        $date = $myHelper->getTheDate();
+
         $this->logger->debug('index');
         $customer = new Customer();
         $customerForm = $this->createForm(CustomerType::class, $customer);
@@ -41,7 +44,8 @@ class CustomerController extends AbstractController {
         }
 
         return $this->render('customer/index.html.twig', [
-            'customerForm' => $customerForm->createView() 
+            'customerForm' => $customerForm->createView(),
+            'date' => $date 
         ]);
     }
 }
