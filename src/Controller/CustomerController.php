@@ -8,12 +8,23 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Customer;
 use Doctrine\Persistence\ManagerRegistry;
+use Psr\Log\LoggerInterface;
 
-class CustomerController extends AbstractController
-{
+class CustomerController extends AbstractController {
+
+    readonly LoggerInterface $logger;
+
+    public function __construct(LoggerInterface $logger) 
+    {
+        $this->logger = $logger;        
+        
+    }
+
+
     #[Route('/form/customer', name: 'form_customer')]
     public function index(Request $request, ManagerRegistry $doctrine)
     {
+        $this->logger->debug('index');
         $customer = new Customer();
         $customerForm = $this->createForm(CustomerType::class, $customer);
 
