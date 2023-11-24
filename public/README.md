@@ -43,6 +43,9 @@ composer require symfony/form
 composer require doctrine/orm -W
 composer require orm
 
+<!-- url generation & versioning of web assets-->
+composer require symfony/asset
+
 # Twig
 Template engine used by Symfony.
 Not mandatory, can use other engine (Smarty, ...)
