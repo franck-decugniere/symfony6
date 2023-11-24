@@ -21,10 +21,7 @@ composer install
 
 <!-- Display information about project -->
 php bin/console about
-php bin/console debug:route 
 php bin/console list make
-php bin/console make:entity
-php bin/console make:form
 
 <!-- Local dev server -->
 symfony server:start
@@ -34,14 +31,18 @@ composer require --dev symfony/profiler-pack
 composer require --dev symfony/maker-bundle
 
 <!-- Route via annotation -->
+php bin/console debug:route 
 composer require doctrine/annotations
 
 <!-- Form -->
 composer require symfony/form
+php bin/console make:entity
+php bin/console make:form
 
 <!-- Doctrine -->
 composer require doctrine/orm -W
 composer require orm
+php bin/console doctrine:database:create
 
 <!-- url generation & versioning of web assets-->
 composer require symfony/asset
