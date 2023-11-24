@@ -43,6 +43,8 @@ php bin/console make:form
 composer require doctrine/orm -W
 composer require orm
 php bin/console doctrine:database:create
+php bin/console make:migration <!--  Compare entity avec DB pour voir ce qu'il manque-->
+php bin/console doctrine:migrations:migrate
 
 <!-- url generation & versioning of web assets-->
 composer require symfony/asset
